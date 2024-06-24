@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<form action="/edit/{{ todo_id }}" method="post">
+    <input type="text" name="newtext" id="newtext" placeholder="Enter new text">
+    <button type="submit"> Submit </button>
+</form>
+
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% if current_user.is_authenticated %}
+    <h3>Your To Do List</h3>
+
+    <form action="/add" method="post">
+        <input type="text" name="task" id="task" placeholder="type here">
+        <button type="submit"> Add Task </button>
+    </form>
+
+    <div>
+        {% for todo in todo_list %}
+        {% if todo.userid == current_user.id %}
+        <p>{{ todo.task }} - {{ todo.complete }} - {{todo.date_created}}</p>
+        {% if todo.complete==False %}
+        <p> Task incomplete.<a href="/update/{{ todo.id }}">Mark as complete?</a></p>
+        {% else %}
+        <p> Task complete.<a href="/update/{{ todo.id }}">Mark as incomplete?</a> </p>
+        {% endif %}
+        <p> Delete task?<a href="/delete/{{ todo.id }}">Delete.</a></p>
+        <p> Edit task?<a href="/edit/{{ todo.id }}">Edit.</a></p>
+        <p> --- </p>
+        {% endif %}
+        {% endfor %}
+    </div>>
+    {% else %}
+    <p>please login to use the to do list manager</p>
+    {% endif %}
+
+{% endblock %}
