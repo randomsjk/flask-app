@@ -1,0 +1,85 @@
+body {
+    background: black;
+    color: white;
+    font-family: "Roboto";
+    
+}
+
+.marginright {
+    margin-right: 20px;
+}
+
+.widthcontrol {
+    width: 340px;
+    float: left;
+    margin-left: 50px
+}
+
+h1 {
+    color: rgb(255, 123, 202);
+    font-style: italic;
+    margin-left: 50px;
+    margin-top: 0px;
+    padding-top: 50px;
+}
+h3 {
+    margin-left:50px;
+}
+
+nav {
+    margin-left:50px;
+}
+
+form {
+    margin-left:50px;
+}
+
+a {
+    color: white;
+    transition: color 0.5s;
+    text-decoration: none;
+}
+
+a:visited {
+    color: white;
+}
+
+a:hover, a:visited:hover {
+    color: grey;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+.container {
+    margin-left:50px;
+    display: flex;
+    gap: 20px;
+}
+
+.marginleft {
+    margin-left: 50px;
+}
+
+.margintop {
+    margin-top:15px;
+}
+
+.inlineformfix {
+    margin-left: 0px;
+}
+
+.incompletecontainer {
+    background-color: rgba(253, 222, 153, 0.4);
+    padding: 20px;
+}
+
+.completedcontainer {
+    background-color: rgba(212, 255, 170, 0.4);
+    padding: 20px;
+}
+
+.marginleft5 {
+    margin-left:5px;
+}

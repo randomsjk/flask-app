@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
 {% block content %}
-
-<h2>Login</h2>
-<form method="POST">
+<br>
+<br>
+<h3 class="marginleft">Login</h3>
+<form method="POST" class="marginleft">
     <p>
         <label for="username">Username</label>
         <input type="text" id="username" name="username" required>
@@ -15,6 +16,8 @@
 </form>
 
 {% with messages = get_flashed_messages() %}
-<p>{{ messages }}</p>
+{% if messages %}
+<p class="marginleft">{{ messages }}</p>
+{% endif %}
 {% endwith %}
 {% endblock %}
